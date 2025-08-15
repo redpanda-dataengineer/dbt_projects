@@ -1,0 +1,24 @@
+name: dbt_pipeline_tpch
+version: 1.0.0
+config-version: 2
+profile: dbt_pipeline_tpch
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  dbt_pipeline_tpch:
+    staging:
+      +materialized: view
+      snowflake_warehouse: test_wh
+    marts:
+      +materialized: table
+      snowflake_warehouse: test_wh

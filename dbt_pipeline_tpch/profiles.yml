@@ -1,0 +1,19 @@
+dbt_pipeline_tpch:
+  target: dev, prod
+  outputs:
+    dev:
+      type: snowflake
+      role: TEST_DBT_ROLE
+      warehouse: TEST_WH
+      database: TEST_DB
+      schema: TEST_SCHEMA
+      account: ''
+      user: ''
+    prod:
+      type: snowflake
+      role: TEST_DBT_ROLE
+      warehouse: TEST_WH
+      database: TEST_DB
+      schema: TEST_SCHEMA
+      account: ''
+      user: ''
