@@ -1,7 +1,15 @@
 azure_dbt_project_uber:
-  target: dev
+  target: dev,prod
   outputs:
     dev:
+      type: snowflake
+      role: AZURE_DBT_ROLE
+      warehouse: TEST_WH
+      database: AZURE_DB
+      schema: AZURE_SCHEMA
+      account: ''
+      user: ''
+    prod:
       type: snowflake
       role: AZURE_DBT_ROLE
       warehouse: AZURE_WH

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: azure
+    database: azure_db
+    schema: azure_schema
+    tables:
+      - name: azure_ext_table

@@ -1,0 +1,37 @@
+models:
+  - name: azure_raw_data
+    columns:
+      - name: booking_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: booking_status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['No Driver Found','Incomplete','Cancelled by Customer','Cancelled by Driver','Completed']
+      - name: vechicle_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['eBike','Go Sedan','Auto','Premier Sedan','Bike','Go Mini','Uber XL']
+      - name: booking_value
+        tests:
+          - not_negative
+      - name: ride_distance
+        tests:
+          - not_negative
+      - name: driver_ratings
+        tests:
+          - not_negative
+          - in_range:
+              min_value: 0
+              max_value: 5
+      - name: customer_rating
+        tests:
+          - not_negative
+          - in_range:
+              min_value: 0
+              max_value: 5

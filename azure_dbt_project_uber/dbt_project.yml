@@ -17,7 +17,7 @@ snapshot-paths:
 models:
   azure_dbt_project_uber:
     raw_data:
-      +materialized: table
+      +materialized: view
       snowflake_warehouse: AZURE_WH
     staging:
       +materialized: view
