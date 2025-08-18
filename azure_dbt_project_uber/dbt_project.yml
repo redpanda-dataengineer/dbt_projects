@@ -1,0 +1,27 @@
+name: azure_dbt_project_uber
+version: 1.0.0
+config-version: 2
+profile: azure_dbt_project_uber
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  azure_dbt_project_uber:
+    raw_data:
+      +materialized: table
+      snowflake_warehouse: AZURE_WH
+    staging:
+      +materialized: view
+      snowflake_warehouse: AZURE_WH
+    marts:
+      +materialized: table
+      snowflake_warehouse: AZURE_WH
