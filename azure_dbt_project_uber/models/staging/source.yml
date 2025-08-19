@@ -5,4 +5,5 @@ sources:
     database: azure_db
     schema: azure_schema
     tables:
-      - name: azure_ext_table
+      - name: azure_raw_data
+        

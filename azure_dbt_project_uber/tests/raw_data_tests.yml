@@ -1,5 +1,5 @@
 models:
-  - name: azure_raw_data
+  - name: cancelled_by_driver
     columns:
       - name: booking_id
         tests:
