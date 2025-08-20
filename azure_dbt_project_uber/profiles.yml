@@ -9,6 +9,7 @@ azure_dbt_project_uber:
       schema: AZURE_SCHEMA
       account: ''
       user: ''
+      threads: 10
     prod:
       type: snowflake
       role: AZURE_DBT_ROLE
@@ -17,3 +18,4 @@ azure_dbt_project_uber:
       schema: AZURE_SCHEMA
       account: ''
       user: ''
+      threads: 10
